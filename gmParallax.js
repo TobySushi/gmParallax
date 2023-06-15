@@ -22,6 +22,9 @@ tiled.registerMapFormat("gmExtended", {
         // create .gml file
         var filePath = FileInfo.path(filename) + '/';
         var file = new TextFile(filePath + "RoomCreationCode.gml", TextFile.WriteOnly);
+        
+        // erase file content- this avoids unwanted code being leftover
+        file.truncate();
 
         // All we need to do is make the room create a parallax object with the correct values
         // begin instance creation code
@@ -45,6 +48,7 @@ tiled.registerMapFormat("gmExtended", {
         file.writeLine("});");  
         file.writeLine("////////////////////////////////////////////////////"); 
 
+        file.close();
         file.commit();
 
         // write the actual gamemaker room
