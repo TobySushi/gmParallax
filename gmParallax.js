@@ -43,6 +43,8 @@ tiled.registerMapFormat("gmExtended", {
 
         }
 
+        imageLayers = [];
+
         // write end of instance creation code
         file.writeLine("    ]");  
         file.writeLine("});");  
