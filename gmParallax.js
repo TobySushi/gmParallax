@@ -48,7 +48,6 @@ tiled.registerMapFormat("gmExtended", {
         file.writeLine("});");  
         file.writeLine("////////////////////////////////////////////////////"); 
 
-        file.close();
         file.commit();
 
         // write the actual gamemaker room
